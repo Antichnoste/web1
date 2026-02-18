@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №1</title>
+<!--    Иконка сайта-->
+    <link rel="icon" type="image/png" href="/icon.png">
+<!--    Все css стили-->
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/forms.css">
+    <link rel="stylesheet" href="style/buttons.css">
+    <link rel="stylesheet" href="style/canvas.css">
+    <link rel="stylesheet" href="style/result.css">
+    <link rel="stylesheet" href="style/alerts.css">
+    <link rel="stylesheet" href="style/table.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Караганов Павел Эдуардович</h1>
+        <p>Группа: P3210 | Вариант №466113 </p>
+    </div>
+
+<div class="container">
+        <div id="result" class="result"></div>
+
+        <div class="table-layout">
+            <div class="table-row">
+                <div class="table-cell">
+                    <form id="geometryForm" method="POST">
+                        <div class="form-group">
+                            <label>Координата X:</label>
+                            <div class="radio-group">
+                                <input type="radio" id="x-2" name="x" value="-2" required>
+                                <label for="x-2">-2</label>
+                                
+                                <input type="radio" id="x-1.5" name="x" value="-1.5">
+                                <label for="x-1.5">-1.5</label>
+                                
+                                <input type="radio" id="x-1" name="x" value="-1">
+                                <label for="x-1">-1</label>
+                                
+                                <input type="radio" id="x-0.5" name="x" value="-0.5">
+                                <label for="x-0.5">-0.5</label>
+                                
+                                <input type="radio" id="x0" name="x" value="0">
+                                <label for="x0">0</label>
+                                
+                                <input type="radio" id="x1" name="x" value="1">
+                                <label for="x1">1</label>
+                                
+                                <input type="radio" id="x1.5" name="x" value="1.5">
+                                <label for="x1.5">1.5</label>
+                                
+                                <input type="radio" id="x2" name="x" value="2">
+                                <label for="x2">2</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="y">Координата Y (от -3 до 5):</label>
+                            <input type="text" id="y" name="y" placeholder="Введите Y" inputmode="decimal" pattern="-?\d*(\.\d+)?" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="r">Радиус R (от 1 до 4):</label>
+                            <input type="text" id="r" name="r" placeholder="Введите R" inputmode="decimal" pattern="\d*(\.\d+)?" required>
+                        </div>
+
+                        <button type="submit">Проверить попадание</button>
+                    </form>
+                </div>
+                
+                <div class="table-cell">
+                    <div class="canvas-container">
+                        <canvas id="geometryCanvas" width="500" height="500"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <section class="result_table">
+            <table id="result-table">
+            <tr>
+                <th>#</th>
+                <th>x</th>
+                <th>y</th>
+                <th>r</th>
+                <th>execution time</th>
+                <th>time</th>
+                <th>result</th>
+            </tr>
+        </table>
+    </section>
+</div>
+
+    <script type="module" src="./script/main.js"></script>
+</body>
+</html>
